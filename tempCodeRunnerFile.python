@@ -1,0 +1,58 @@
+# Simple Interactive Chatbot
+def greet():
+    print("🤖 Hello! I'm PyBot, your Python assistant.")
+    print("Type 'help' to see what I can do, or 'bye' to exit.\n")
+
+def show_help():
+    print("\n📜 PyBot Commands:")
+    print("- 'hello': Greet me")
+    print("- 'joke': Tell a programming joke")
+    print("- 'calc': Simple calculator")
+    print("- 'bye': Exit chat")
+
+def tell_joke():
+    jokes = [
+        "Why do programmers prefer dark mode? Because light attracts bugs!",
+        "How do you fix a broken Python code? With a 'try-except' block!",
+        "Why did the programmer quit their job? They didn't get arrays (a raise)!"
+    ]
+    import random
+    print(f"\n😂 {random.choice(jokes)}")
+
+def calculator():
+    try:
+        num1 = float(input("Enter first number: "))
+        op = input("Enter operator (+, -, *, /): ")
+        num2 = float(input("Enter second number: "))
+        
+        if op == '+': print(f"Result: {num1 + num2}")
+        elif op == '-': print(f"Result: {num1 - num2}")
+        elif op == '*': print(f"Result: {num1 * num2}")
+        elif op == '/': print(f"Result: {num1 / num2}")
+        else: print("Invalid operator!")
+    except:
+        print("🚨 Error: Please enter valid numbers!")
+
+# Main Chat Loop
+def chatbot():
+    greet()
+    while True:
+        user_input = input("\nYou: ").strip().lower()
+        
+        if user_input == 'bye':
+            print("🤖 Goodbye! Happy coding! 🚀")
+            break
+        elif user_input == 'help':
+            show_help()
+        elif user_input == 'hello':
+            print("🤖 Hi there! How can I help?")
+        elif user_input == 'joke':
+            tell_joke()
+        elif user_input == 'calc':
+            calculator()
+        else:
+            print("🤖 I didn't understand. Type 'help' for options.")
+
+# Run the chatbot
+if __name__ == "__main__":
+    chatbot()
