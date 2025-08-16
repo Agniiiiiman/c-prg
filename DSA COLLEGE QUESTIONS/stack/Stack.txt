@@ -1,0 +1,18 @@
+A stack is a data structure that can hold many elements.
+Basic operations we can do on a stack are:
+
+1.Push: Adds a new element on the stack.
+2.Pop: Removes and returns the top element from the stack.
+3.Peek: Returns the top element on the stack.
+4.isEmpty: Checks if the stack is empty.
+5.Size: Finds the number of elements in the stack.
+
+Reasons to implement stacks using arrays:
+
+Memory Efficient: Array elements do not hold the next elements address like linked list nodes do.
+Easier to implement and understand: Using arrays to implement stacks require less code than using linked lists, and for this reason it is typically easier to understand as well.
+
+
+A reason for not using arrays to implement stacks:
+
+Fixed size: An array occupies a fixed part of the memory. This means that it could take up more memory than needed, or if the array fills up, it cannot hold more elements.

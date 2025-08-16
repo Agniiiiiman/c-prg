@@ -45,7 +45,7 @@ void displayMatrix(int **matrix, int rows, int cols, char msg[]) {
 // Function to transpose a matrix
 int** transposeMatrix(int **matrix, int rows, int cols) {
     int **transpose = allocateMatrix(cols, rows);
-    for (int i = 0; i < rows; i++) {
+    for (int i = 0; i < rows; i++) { 
         for (int j = 0; j < cols; j++) {
             transpose[j][i] = matrix[i][j];
         }
